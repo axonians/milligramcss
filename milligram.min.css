@@ -114,14 +114,8 @@ ul {list-style:circle inside;}
 .button,button,dd,dt,li {margin-bottom:1.0rem;}
 fieldset,input,select,textarea {margin-bottom:1.5rem;}
 blockquote,dl,figure,form,ol,p,pre,table,ul {margin-bottom:2.5rem;}
-table {border-spacing:0;display:block;overflow-x:auto;text-align:left;width:100%;}
-td,th {border-bottom:0.1rem solid var(--iput-fore);padding:1.2rem 1.5rem;
-}
-td:first-child,th:first-child {padding-left:0;}
-td:last-child,th:last-child {padding-right:0;}
-@media (min-width: 40rem) {
-  table {display:table;overflow-x:auto;}
-}
+table {border-spacing:0;display:table;overflow-x:auto;text-align:left;width:100%;}
+td,th {border-bottom:0.1rem solid var(--iput-fore);padding:1.2rem 1.5rem;}
 b,strong {font-weight:bold;}
 p {margin-top: 0;}
 h1,h2,h3,h4,h5,h6 {font-weight:300;letter-spacing:-.1rem;margin-bottom:2.0rem;margin-top:0;}
@@ -145,16 +139,16 @@ table thead, table tr:nth-child(1){background:var(--collapse-card);position:stic
 .striped tr:nth-child(odd) *{background:var(--secondary-bg);}
 /*Modal Styling*/
 .modal{display:none;z-index:1000;}
-input[data-mg-modal]{display:none;}
-input[data-mg-modal]:checked + .modal{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;background:var(--modal-bg);min-height:100%;min-width:100%;}
+input.modal{display:none;}
+input.modal:checked + .modal{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;background:var(--modal-bg);min-height:100%;min-width:100%;}
 .modal .card{padding:1rem;background:var(--modal-card);min-width:320px;max-width:80%;position:relative;border:1px solid var(--iput-border);}
 .modal-close{position:absolute;top:0.5rem;right:0.5rem;color:var(--iput-back);cursor:pointer;font-size:2rem;}
 /*Accordion Styling*/
-input[data-mg-collapse]+label{cursor:pointer;width:100%;background:var(--collapse-card);display:block;padding:1rem;border:1px solid var(--iput-border);position:relative;}
-input[data-mg-collapse]+label::after{content:'\25BC';position:absolute;right:1rem;}
-.collapse .card *, input[data-mg-collapse]{display:none;}
-input[data-mg-collapse]:checked + label::after{content:'\25B2';}
-input[data-mg-collapse]:checked + label + .card *{display:block;padding:1rem;}
+input.collapse+label{cursor:pointer;width:100%;background:var(--collapse-card);display:block;padding:1rem;border:1px solid var(--iput-border);position:relative;}
+input.collapse+label::after{content:'\25BC';position:absolute;right:1rem;}
+.collapse .card *, input.collapse{display:none;}
+input.collapse:checked + label::after{content:'\25B2';}
+input.collapse:checked + label + .card *{display:block;padding:0.5rem;}
 /*Scrollbar Styling*/
 ::-webkit-scrollbar {width: 0.5rem;height:0.5rem;}
 ::-webkit-scrollbar-track {background: var(--iput-border);}
