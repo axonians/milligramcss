@@ -95,7 +95,7 @@ td,th {border-bottom:0.1rem solid var(--iput-fore);padding:1.2rem 1.5rem;}
 td:first-child,th:first-child {padding-left:0;}
 td:last-child,th:last-child {padding-right:0;}
 @media (min-width: 40rem) {
-  table {display:table;overflow-x:initial;}
+  table {display:table;overflow-x:auto;}
 }
 b,strong {font-weight:bold;}
 p {margin-top: 0;}
@@ -110,6 +110,20 @@ img {max-width:100%;}
 .clearfix:after {clear:both;content:' ';display:table;}
 .float-left {float:left;}
 .float-right {float:right;}
+/*Form Styling*/
 form .inline-form {display:inline-block;width:25rem;}
+/*Table Styling*/
 .hoverable tr:hover :not(th) {background:var(--light-bg) !important;cursor:pointer;}
 .striped tr:nth-child(even) *{background:var(--secondary-bg);}
+/*Modal Styling*/
+.modal{display:none;z-index:1000;}
+input[data-mg-modal]{display:none;}
+input[data-mg-modal]:checked + .modal{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;background:var(--modal-bg);min-height:100%;min-width:100%;}
+.modal .card{padding:1rem;background:var(--modal-card);min-width:320px;max-width:80%;position:relative;border:1px solid var(--iput-border);}
+.modal-close{position:absolute;top:0.5rem;right:0.5rem;color:var(--iput-back);cursor:pointer;font-size:2rem;}
+/*Accordion Styling*/
+input[data-mg-collapse]+label{cursor:pointer;width:100%;background:var(--collapse-card);display:block;padding:1rem;border:1px solid var(--iput-border);position:relative;}
+input[data-mg-collapse]+label::after{content:'\25BC';position:absolute;right:1rem;}
+.collapse .card *, input[data-mg-collapse]{display:none;}
+input[data-mg-collapse]:checked + label::after{content:'\25B2';}
+input[data-mg-collapse]:checked + label + .card *{display:block;padding:1rem;}
