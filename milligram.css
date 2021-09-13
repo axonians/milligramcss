@@ -133,7 +133,7 @@ img {max-width:100%;}
 form .inline-form {display:inline-block;width:25rem;}
 .pointable{cursor:pointer;}
 /*Table Styling*/
-.table{display:block;overflow-y:scroll;position:relative;overflow-x:auto;padding-inline:0.5rem;}
+.table{display:block;overflow:auto;position:relative;padding-inline:0.5rem;}
 table thead, table tr:nth-child(1){background:var(--collapse-card);position:sticky;top:0;border-bottom:1px solid var(--iput-border);}
 .hoverable tr:hover :not(th) {background:var(--light-bg) !important;cursor:pointer;}
 .striped tr:nth-child(odd) *{background:var(--secondary-bg);}
