@@ -161,12 +161,18 @@ input.collapse:checked + label + .card *{display:block;padding:0.5rem;}
 ::-webkit-scrollbar-track {background: var(--iput-border);}
 ::-webkit-scrollbar-thumb {background: rgba(var(--scrollbar-thumb),0.5);}
 ::-webkit-scrollbar-thumb:hover {background: rgba(var(--scrollbar-thumb),1.2);}
-/*Loader Styling*/
-.loader {border:0.15em solid #f3f3f3;border-radius:50%;border-top:0.15em solid #3498db;width:1em;height:1em;animation:spin 2s linear infinite;}
+/*Loader and Progress Styling*/
+.loader {border:0.15em solid var(--light-bg);border-radius:50%;border-top:0.15em solid var(--iput-back);width:1em;height:1em;animation:spin 2s linear infinite;}
 @keyframes spin {
   0% {transform:rotate(0deg);}
   100% {transform:rotate(360deg);}
 }
+progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-appearance:none;appearance: none;height:1rem;width:calc(100% - 2 * 0.5rem);margin:0.5rem;border:0;border-radius:calc(2 * 0.125rem);background:var(--iput-border);color:var(--iput-back);position:relative;}
+progress::-webkit-progress-value {background:var(--iput-back);}
+progress::-webkit-progress-bar {background:var(--iput-border);}
+progress.inline {display:inline-block;vertical-align:middle;width:60%;}
+progress::after{content:attr(value)'%';position:absolute;right:0;top:calc(-50% + 0.25rem);}
+progress.no-val::after{content:'';}
 /*Utility Classes*/
 .hidden{display:none !important;}
 /* Larger than mobile screen */
