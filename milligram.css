@@ -161,3 +161,26 @@ input.collapse:checked + label + .card *{display:block;padding:0.5rem;}
 ::-webkit-scrollbar-track {background: var(--iput-border);}
 ::-webkit-scrollbar-thumb {background: rgba(var(--scrollbar-thumb),0.5);}
 ::-webkit-scrollbar-thumb:hover {background: rgba(var(--scrollbar-thumb),1.2);}
+/*Loader Styling*/
+.loader {border:0.15em solid #f3f3f3;border-radius:50%;border-top:0.15em solid #3498db;width:1em;height:1em;animation:spin 2s linear infinite;}
+@keyframes spin {
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+/*Utility Classes*/
+.hidden{display:none !important;}
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) {
+.hidden-sm{display:none !important;}
+}
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) {
+.hidden-md{display:none !important;}
+}
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) {
+ .hidden-lg{display:none !important;}
+}
+
+
+
