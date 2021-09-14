@@ -167,7 +167,7 @@ input.collapse:checked + label + .card *{display:block;padding:0.5rem;}
   0% {transform:rotate(0deg);}
   100% {transform:rotate(360deg);}
 }
-progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-appearance:none;appearance: none;height:1rem;width:calc(100% - 2 * 0.5rem);margin:0.5rem;border:0;border-radius:calc(2 * 0.125rem);background:var(--iput-border);color:var(--iput-back);position:relative;}
+progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-appearance:none;appearance:none;height:1rem;width:calc(100% - 2 * 0.5rem);margin:0.5rem;border:0;border-radius:calc(2 * 0.125rem);background:var(--iput-border);color:var(--iput-back);position:relative;}
 progress::-webkit-progress-value {background:var(--iput-back);}
 progress::-webkit-progress-bar {background:var(--iput-border);}
 progress.inline {display:inline-block;vertical-align:middle;width:60%;}
