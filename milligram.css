@@ -171,7 +171,7 @@ progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-app
 progress::-webkit-progress-value {background:var(--iput-back);}
 progress::-webkit-progress-bar {background:var(--iput-border);}
 progress.inline {display:inline-block;vertical-align:middle;width:60%;}
-progress.verbose::after{content:attr(value)'%';position:absolute;right:0;top:calc(-50% + 0.25rem);}
+progress.verbose::after{content:attr(value)'%';position:absolute;right:105%;top:calc(-50% + 0.25rem);}
 /*Utility Classes*/
 .hidden{display:none !important;}
 /* Larger than mobile screen */
