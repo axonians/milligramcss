@@ -130,8 +130,6 @@ img {max-width:100%;}
 .float-left {float:left;}
 .float-right {float:right;}
 /*Form Styling*/
-form .inline-form {display:inline-block;width:25rem;}
-.pointable{cursor:pointer;}
 /*Table Styling*/
 .table{display:block;overflow:auto;position:relative;padding-inline:0.5rem;}
 table thead, table tr:nth-child(1){background:var(--collapse-bg);position:sticky;top:0;border-bottom:1px solid var(--iput-border);}
@@ -167,13 +165,19 @@ input.collapse:checked + label + .card *{display:block;padding:0.5rem;}
   0% {transform:rotate(0deg);}
   100% {transform:rotate(360deg);}
 }
-progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-appearance:none;appearance:none;height:1rem;width:calc(100% - 2 * 0.5rem);margin:0.5rem;border:0;border-radius:calc(2 * 0.125rem);background:var(--iput-border);color:var(--iput-back);position:relative;}
+progress {display:block;vertical-align:baseline;-webkit-appearance:none;-moz-appearance:none;appearance: none;height:1rem;width:calc(100% - 2 * 0.5rem);margin:0.5rem;border:0;border-radius:calc(2 * 0.125rem);background:var(--iput-border);color:var(--iput-back);position:relative;}
 progress::-webkit-progress-value {background:var(--iput-back);}
 progress::-webkit-progress-bar {background:var(--iput-border);}
 progress.inline {display:inline-block;vertical-align:middle;width:60%;}
-progress.verbose::after{content:attr(value)'%';position:absolute;right:105%;top:calc(-50% + 0.25rem);}
+progress.verbose::after{content:attr(value)'%';position:absolute;right:-3.5rem;top:calc(-50%);}
 /*Utility Classes*/
+form .inline-form {display:inline-block;width:25rem;}
+.pointable{cursor:pointer;}
 .hidden{display:none !important;}
+.padded{display:inline-block;margin-inline:1rem;}
+.padded-in{display:inline-block;margin-inline:1rem;}
+.padded-bl{display:inline-block;margin-block:1rem;}
+
 /* Larger than mobile screen */
 @media (min-width: 40.0rem) {
 .hidden-sm{display:none !important;}
@@ -186,6 +190,3 @@ progress.verbose::after{content:attr(value)'%';position:absolute;right:105%;top:
 @media (min-width: 120.0rem) {
  .hidden-lg{display:none !important;}
 }
-
-
-
